@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Time Table</title>
+        <script text="text/javascript" src="timetable2js.js"></script>
+        <style type="text/css">
+          fieldset{
+            border-color: beige;
+            border: 1px solid;
+            border-radius: 3.5px;
+            margin: 10 10 0 10px;
+            width: 40%;
+        }
+        fieldset legend{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            color: #9e4776;
+        }
+        </style>
+    </head>
+    <body onload="initialization()">
+            <div >
+                    <fieldset style="width:500px"><legend>Add Trainer</legend>
+                       Trainer Name: <input type="text" id="tname"  placeholder="Trainer Name"/><br>
+                        skill 1:<select id="tskills" >
+                                <option value="">-select-</option>
+                                <option value="math">math</option>
+                                <option value="physics">physics</option>
+                                <option value="chemistry">chemistry</option>
+                                <option value="english">english</option>
+                                <option value="cs">computer science</option>
+                                <option value="biology">biology</option>
+                            </select>
+                            skill 2:<select id="tskills2" ><br>
+                                    <option value="">-select-</option>
+                                    <option value="none">None</option>
+                                    <option value="math">math</option>
+                                    <option value="physics">physics</option>
+                                    <option value="chemistry">chemistry</option>
+                                    <option value="english">english</option>
+                                    <option value="cs">computer science</option>
+                                    <option value="biology">biology</option>
+                                </select>
+                        <input type="button" onclick="saveTrainer()" value="SAVE"  />
+                </fieldset>
+                </div>
+                <div >
+                        <fieldset style="width:500px"><legend>select Subject</legend>
+                            <select id="slot" >
+                                    <option value="">-select-</option>
+                                    <option value="10to11">10:00AM to 11:00AM </option>
+                                    <option value="11to12">11:00AM to 12:00PM</option>
+                                    <option value="12to1">12:00PM to 01:00PM</option>
+                                    <option value="1to2">01:00PM to 02:00PM</option>
+                                    <option value="3to4">03:00PM to 04:00PM</option>
+                                    <option value="4to5">04:00PM to 05:00PM</option>
+                            </select>
+                               <select id="subject" >
+                                    <option value="">-select-</option>
+                                    <option value="math">math</option>
+                                    <option value="physics">physics</option>
+                                    <option value="chemistry">chemistry</option>
+                                    <option value="english">english</option>
+                                    <option value="cs">computer science</option>
+                                    <option value="biology">biology</option>
+                                </select>
+                            <input type="button" onclick="selectTrainer()" value="Search"  />
+                            <select id="gettrainer"></select>
+                            <input type="button" value="Assign" onclick="assign()">
+                    </fieldset>
+                    </div>
+            <div style="margin-top:50px">
+                <table border=1>
+                    <tr>
+                        <th>class</th>
+                        <th>10:00AM to 11:00AM</th>
+                        <th>11:00AM to 12:00AM</th>
+                        <th>12:00PM to 01:00PM</th>
+                        <th>01:00PM to 02:00PM</th>
+                        <th>03:00PM to 04:00PM</th>
+                        <th>04:00PM to 05:00PM</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <td id="sess1"></td>
+                        <td id="sess2"></td>
+                        <td id="sess3"></td>
+                        <td id="sess4"></td>
+                        <td id="sess5"></td>
+                        <td id="sess6"></td>
+                    </tr>
+                </table>
+            </div>
+
+    </body>
+</html>
